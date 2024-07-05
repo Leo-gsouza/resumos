@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../paginas/estilos/paginas.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Python 3</title>
+</head>
+<body>
+    <header>
+        <h1>Python 3</h1>
+        <span class="material-symbols-outlined" id="icon">widgets</span>
+    </header>
+    <menu id="itens">
+        <div class="itens">
+            <a href="../index.html">Menu</a>
+            <a href="../paginas/html5.html">HTML5</a>
+            <a href="../paginas/css3.html">CSS3</a>
+            <a href="../paginas/javascript.html">JavaScript</a>
+        </div>
+    </menu>
+    <main>
+        <section class="texto">
+            <h2>Exercicio 01</h2>
+            <p>1º Crie um programa que leia um número real qualquer pelo teclado e mostre na tela a sua porção Inteira.</p>
+            <p id="resolucao" onclick="ver(um)">Clique aqui para ver a resolução</p>
+            <div class="python" id="um">
+                <pre>
+                    <code>
+from math import trunc
+
+
+numero = float(input('Digite um número real: '))
+
+print(f'O numéro inteiro é {int(numero)}')
+
+print(f'O número inteiro é {trunc(numero)} ')
+
+<h2>Explicações</h2>
+
+Este exercício foi resolvido de duas maneiras:
+
+1ªUsando o método int, que mostra apenas 
+a parte inteira de um número.
+
+2ª Usando o método trunc da biblioteca math, 
+que também pega apenas a parte inteira.
+                    </code>
+                </pre>
+            </div>
+
+            <h2>Exercicio 02</h2>
+            <p>2º Faça um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo. Calcule e mostre o comprimento da hipotenusa.</p>
+            <p id="resolucao" onclick="ver(dois)">Clique aqui para ver a resolução</p>
+            <div class="python" id="dois">
+                <pre>
+                    <code>
+oposto = float(input('Cateto Oposto: '))
+adjacente = float(input('Cateto Adjacente: '))
+
+print(f'Hipotenusa = {(oposto**2 + adjacente**2)**0.5:.2f}')
+
+<h2>Explicações</h2>
+Este exercício simples usa duas variáveis. 
+O valor da hipotenusa foi calculado diretamente, 
+sem a necessidade de criar outra variável. 
+Foi usado :.2f para formatar a saída com dois 
+números após a vírgula.
+                    </code>
+                </pre>
+            </div>
+
+            <h2>Exercicio 03</h2>
+            <p>3º Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.</p>
+            <p id="resolucao" onclick="ver(tres)">Clique aqui para ver a resolução</p>
+            <div class="python" id="tres">
+                <pre>
+                    <code>
+from math import sin, radians, cos, tan
+
+angulo = int(input('Digite o angulo que você deseja: '))
+seno = sin(radians(angulo))
+coseno = cos(radians(angulo))
+tangente = tan(radians(angulo))
+
+print(f'O seno do angulo de {angulo}º é {seno:.2f}.\
+\nO coseno do angulo de {angulo}º é {coseno:.2f}.\
+\nA tangente do angulo de {angulo}º é {tangente:.2f} ')
+
+<h2>Explicações</h2>
+Foi necessário importar da biblioteca math 
+os métodos sin, cos, tan e radians.
+
+Usou-se \ para continuar o código na linha 
+seguinte e \n para exibir o texto em uma nova 
+linha, evitando novos prints.
+
+
+                    </code>
+                </pre>
+            </div>
+
+            <h2>Exercicio 04</h2>
+            <p>4º Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome dos alunos e escrevendo na tela o nome do escolhido.</p>
+            <p id="resolucao" onclick="ver(quatro)">Clique aqui para ver a resolução</p>
+            <div class="python" id="quatro">
+                <pre>
+                    <code>
+from random import choice
+
+alunos = ['Leo','Carlos','Nat', 'Ana' ]
+escolhido = choice(alunos)
+
+print(f'Escolhido = {escolhido}')
+
+<h2>Explicações</h2>
+Usado o metodo CHOICE da biblioteca RANDOM
+Criado uma lista com 4 elementos
+Criado uma variavel para a escolha
+
+                    </code>
+                </pre>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="../paginas/scripts/itens.js"></script>
+    <script src="../paginas/scripts/python.js"></script>
+</body>
+</html>

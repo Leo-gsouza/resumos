@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --cor1: #1A1E29;
+    --cor2: #132D46;
+    --cor3: #01C38E;
+    --titulo: "Montserrat";
+    --padrao: "Merriweather";
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}
+
+img#logo{
+    display: block;
+    margin: auto;
+    width: 80px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+
+    position: relative;
+    animation: moveLogo 2s infinite alternate;
+}
+
+@keyframes moveLogo{
+    0%{
+        left: -15px;
+
+    }
+
+    100%{
+        left: 15px;
+    }
+}
+
+section.menu{
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: 100vh;
+}
+
+div.botoes{
+    width: 120px;
+    position: absolute;
+    padding: 10px;
+
+    background-color: var(--cor2);
+    color: white;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.329);
+
+    font-size: 1.2em;
+    font-family: var(--padrao);
+    text-align: center;
+
+    animation: botoes 3s infinite alternate;
+}
+
+@keyframes botoes{
+    0%{
+       background-color: #132D46;
+    }
+
+    100%{
+        background-color: #01C38E;
+    }
+}
+
+#botao1{
+    left: 50%;
+    transform: translateX(-110%);
+}
+
+#botao2{
+    left: 50%;
+    transform: translateX(10%);
+}
+
+#botao3{
+    top: 60px;
+    left: 50%;
+    transform: translateX(-110%);
+}
+
+#botao4{
+    top: 60px;
+    left: 50%;
+    transform: translateX(10%);
+}
