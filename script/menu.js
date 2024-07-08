@@ -26,7 +26,7 @@ function clicar(botao, efeitoId){
         }
     }else if( botaoId == 'botao4'){
         efeito.onended = function(){
-            location.href = 'paginas/javascript.html'
+            location.href = 'paginas/java.html'
         }
     }
 }
