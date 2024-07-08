@@ -26,7 +26,7 @@
             <p>Aqui veremos as resoluções dos exercicios de forma inteirativa. Todos os exercicios vão ter suas explicações detalhadas</p>
 
             <h2>Exercicio 01</h2>
-            <p>1º Crie um programa que leia um número real qualquer pelo teclado e mostre na tela a sua porção Inteira.</p>
+            <p>Crie um programa que leia um número real qualquer pelo teclado e mostre na tela a sua porção Inteira.</p>
             <div class="js">
                 <label for="numeroId">Numero Real: </label>
                 <input type="number" name="numero" id="numeroId" oninput="numeroReal(um)">
@@ -34,7 +34,7 @@
             </div>
 
             <h2>Exercicio 2</h2>
-            <p>2º Faça um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo. Calcule e mostre o comprimento da hipotenusa.</p>
+            <p>Faça um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo. Calcule e mostre o comprimento da hipotenusa.</p>
             <div class="js">
                 <label for="opostoId">Oposto: </label>
                 <input type="number" name="oposto" id="opostoId" oninput="hipotenusa(opostoId, adjacenteId, dois)">
@@ -44,11 +44,27 @@
             </div>
 
             <h2>Exercicio 03</h2>
-            <p>3º Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.</p>
+            <p>Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.</p>
             <div class="js">
                 <label for="anguloId">Angulo: </label>
                 <input type="number" name="angulo" id="anguloId" oninput="angulo(this, tres)">
                 <div class="resultado" id="tres"></div>
+            </div>
+
+            <h2>Exercicio 04</h2>
+            <p>Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome dos alunos e escrevendo na tela o nome do escolhido.</p>
+            <div class="js">
+                <label for="aluno1Id">Aluno 1:</label>
+                <input type="text" name="aluno1" id="aluno1Id">
+                <label for="aluno2Id">Aluno 2:</label>
+                <input type="text" name="aluno2" id="aluno2Id">
+                <label for="aluno3Id">Aluno 3:</label>
+                <input type="text" name="aluno3" id="aluno3Id">
+                <label for="aluno4Id">Aluno 4:</label>
+                <input type="text" name="aluno4" id="aluno4Id">
+                <input type="submit" value="Sortear" onclick="aluno(quatro)">
+
+                <div class="resultado" id="quatro"></div>
             </div>
         </section>
     </main>

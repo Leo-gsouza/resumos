@@ -23,12 +23,12 @@
     <main>
         <section class="texto">
             <h2>Exercicio 01</h2>
-            <p>1º Crie um programa que leia um número real qualquer pelo teclado e mostre na tela a sua porção Inteira.</p>
+            <p>Crie um programa que leia um número real qualquer pelo teclado e mostre na tela a sua porção Inteira.</p>
             <p id="resolucao" onclick="ver(um)">Clique aqui para ver a resolução</p>
             <div class="python" id="um">
                 <pre>
                     <code>
-from math import trunc
+from <strong>math</strong> import <strong>trunc</strong>
 
 
 numero = float(input('Digite um número real: '))
@@ -41,17 +41,17 @@ print(f'O número inteiro é {trunc(numero)} ')
 
 Este exercício foi resolvido de duas maneiras:
 
-1ªUsando o método int, que mostra apenas 
+1ªUsando o <strong>método int</strong>, que mostra apenas 
 a parte inteira de um número.
 
-2ª Usando o método trunc da biblioteca math, 
+2ª Usando o método <strong>trunc</strong> da biblioteca <strong>math</strong>, 
 que também pega apenas a parte inteira.
                     </code>
                 </pre>
             </div>
 
             <h2>Exercicio 02</h2>
-            <p>2º Faça um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo. Calcule e mostre o comprimento da hipotenusa.</p>
+            <p>Faça um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo. Calcule e mostre o comprimento da hipotenusa.</p>
             <p id="resolucao" onclick="ver(dois)">Clique aqui para ver a resolução</p>
             <div class="python" id="dois">
                 <pre>
@@ -65,35 +65,35 @@ print(f'Hipotenusa = {(oposto**2 + adjacente**2)**0.5:.2f}')
 Este exercício simples usa duas variáveis. 
 O valor da hipotenusa foi calculado diretamente, 
 sem a necessidade de criar outra variável. 
-Foi usado :.2f para formatar a saída com dois 
+Foi usado <strong>:.2f</strong> para formatar a saída com dois 
 números após a vírgula.
                     </code>
                 </pre>
             </div>
 
             <h2>Exercicio 03</h2>
-            <p>3º Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.</p>
+            <p>Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.</p>
             <p id="resolucao" onclick="ver(tres)">Clique aqui para ver a resolução</p>
             <div class="python" id="tres">
                 <pre>
                     <code>
-from math import sin, radians, cos, tan
+from <strong>math</strong> import <strong>sin</strong>, <strong>radians</strong>, <strong>cos</strong>, <strong>tan</strong>
 
 angulo = int(input('Digite o angulo que você deseja: '))
-seno = sin(radians(angulo))
-coseno = cos(radians(angulo))
-tangente = tan(radians(angulo))
+seno = <strong>sin(radians(angulo))</strong>
+coseno = <strong>cos(radians(angulo))</strong>
+tangente = <strong>tan(radians(angulo))</strong>
 
 print(f'O seno do angulo de {angulo}º é {seno:.2f}.\
 \nO coseno do angulo de {angulo}º é {coseno:.2f}.\
 \nA tangente do angulo de {angulo}º é {tangente:.2f} ')
 
 <h2>Explicações</h2>
-Foi necessário importar da biblioteca math 
-os métodos sin, cos, tan e radians.
+Foi necessário importar da biblioteca <strong>math</strong> 
+os métodos <strong>sin</strong>, <strong>cos</strong>, <strong>tan</strong> e <strong>radians</strong>.
 
-Usou-se \ para continuar o código na linha 
-seguinte e \n para exibir o texto em uma nova 
+Usou-se <strong>\</strong> para continuar o código na linha 
+seguinte e <strong>\n</strong> para exibir o texto em uma nova 
 linha, evitando novos prints.
 
 
@@ -102,23 +102,126 @@ linha, evitando novos prints.
             </div>
 
             <h2>Exercicio 04</h2>
-            <p>4º Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome dos alunos e escrevendo na tela o nome do escolhido.</p>
+            <p>Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome dos alunos e escrevendo na tela o nome do escolhido.</p>
             <p id="resolucao" onclick="ver(quatro)">Clique aqui para ver a resolução</p>
             <div class="python" id="quatro">
                 <pre>
                     <code>
-from random import choice
+from <strong>random</strong> import <strong>choice</strong>
 
 alunos = ['Leo','Carlos','Nat', 'Ana' ]
-escolhido = choice(alunos)
+escolhido = <strong>choice(alunos)</strong>
 
 print(f'Escolhido = {escolhido}')
 
 <h2>Explicações</h2>
-Usado o metodo CHOICE da biblioteca RANDOM
+Usado o metodo <strong>CHOICE</strong> da biblioteca <strong>RANDOM</strong>
 Criado uma lista com 4 elementos
 Criado uma variavel para a escolha
 
+                    </code>
+                </pre>
+            </div>
+
+            <h2>Exercicio 05</h2>
+            <p>O mesmo professor do desafio 19 quer sortear a ordem de apresentação de trabalhos dos alunos. Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada.</p>
+            <p id="resolucao" onclick="ver(cinco)">Clique aqui para ver a resolução</p>
+            <div class="python" id="cinco">
+                <pre>
+                    <code>
+from <strong>random</strong> import <strong>shuffle</strong>
+
+alunos = [str(input('1º Aluno: ')), 
+          str(input('2º Aluno: ')), 
+          str(input('3º Aluno: ')),
+          str(input('4º Aluno: '))]
+
+shuffle(alunos)
+
+c = 1
+
+for a in alunos:
+    print(f'{c}º Aluno é {a}')
+    c += 1
+
+<h2>Explicação</h2>
+Foi necessario importar o metodo <strong>shuffle</strong>
+da biblioteca <strong>random</strong>. Ele muda a ordem
+dos elementos dentro da lista.
+
+O <strong>input</strong> criado para iserir os valores em 
+alunos foram criados dentro de uma lista
+para reduzir o codigo.
+
+criado uma variavel <strong>c</strong> para indicar o 
+número do aluno dentro do for.
+
+Usado o <strong>for</strong> para interar a lista. O valor 
+<strong>'a'</strong> sempre exibira todos os elementos 
+dentro da lista um por vez. 
+
+
+
+                    </code>
+                </pre>
+            </div>
+
+            <h2>Exercicio 06</h2>
+            <p>22: Crie um programa que leia o nome completo de uma pessoa e mostre:</p>
+            <ol type="1">
+                <li>O nome com todas as letras maiúsculas e minúsculas.</li>
+                <li>Quantas letras ao todo (sem considerar espaços).</li>
+                <li>Quantas letras tem o primeiro nome.</li>
+            </ol>
+            <p id="resolucao" onclick="ver(seis)">Clique aqui para ver a resolução</p>
+            <div class="python" id="seis">
+                <pre>
+                    <code>
+nome = str(input('Nome completo: ')).strip().title()
+primeiro = nome[:nome.find(' ')]
+ultimo = nome[nome.rfind(' '):]
+maiusculo = nome.upper()
+minusculo = nome.lower()
+espacos = nome.count(' ')
+letras = len(nome) - espacos
+
+print(f'Primeiro nome: {primeiro}\
+       \nUltimo nome: {ultimo}\
+       \nMaiusculo: {maiusculo}\
+       \nMinusculo: {minusculo}\
+       \nQuatidade de letras: {letras}')
+
+<h2>Explicação</h2>
+
+Após a variável nome ser inserida, foi 
+utilizado <strong>strip</strong> para remover espaços 
+digitados no início e fim, e <strong>title</strong> para 
+deixar todas as primeiras letras em maiúsculo.
+
+A variável primeiro foi criada para obter 
+o primeiro nome. Após o nome da variável, 
+foi inserido um <strong>colchete</strong> seguido de <strong>vazio</strong> 
+antes dos <strong>dois pontos</strong>, que significa desde 
+o início até <strong>find(' ')</strong>, que indica o 
+primeiro espaço encontrado.
+
+A variável ultimo foi criada semelhante à 
+variável primeiro. A única diferença é que 
+foi utilizado <strong>rfind</strong>, que procura da direita 
+para a esquerda, encontrando assim o último 
+espaço, e a ordem dentro dos <strong>colchetes</strong>, 
+que se inicia do último espaço até o fim.
+
+Para obter a quantidade de letras, foi 
+usado <strong>count(' ')</strong> para contar o número de 
+espaços e <strong>len(nome)</strong>, que conta o número 
+de caracteres da variável. Logo em seguida, 
+foi realizada a subtração entre o número 
+de caracteres e os espaços.
+
+Para deixar o nome em maiúsculo e minúsculo, 
+basta utilizar após o nome .<strong>upper()</strong> para 
+maiúsculo e .<strong>lower()</strong> para minúsculo.
                     </code>
                 </pre>
             </div>

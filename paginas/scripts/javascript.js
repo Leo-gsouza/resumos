@@ -20,3 +20,23 @@ function angulo(valor, res){
 
     res.innerHTML =  `Seno = ${seno.toFixed(3)}<br>Cosseno = ${cosseno.toFixed(3)}<br>Tangente = ${tangente.toFixed(3)}`
 }
+
+function aluno(resultado){
+    const aluno1 = document.getElementById('aluno1Id').value
+    const aluno2 = document.getElementById('aluno2Id').value
+    const aluno3 = document.getElementById('aluno3Id').value
+    const aluno4 = document.getElementById('aluno4Id').value
+
+    const alunos = []
+    if (aluno1) alunos.push(aluno1)
+    if (aluno2) alunos.push(aluno2)
+    if (aluno3) alunos.push(aluno3)
+    if (aluno4) alunos.push(aluno4)
+
+    if (alunos.length > 0){
+        const indice = Math.floor(Math.random() * alunos.length)
+        const sorteado = alunos[indice]
+        resultado.innerHTML =  `${sorteado}`
+
+    }else{resultado.innerHTML = `Ninguém`}
+}

@@ -31,17 +31,19 @@ img#logo{
     margin-bottom: 30px;
 
     position: relative;
-    animation: moveLogo 2s infinite alternate;
+    animation: moveLogo 1s infinite alternate;
 }
 
 @keyframes moveLogo{
     0%{
-        left: -15px;
+        width: 80px;
+        padding: 5px;
 
     }
 
     100%{
-        left: 15px;
+        width: 90px;
+        padding: 0px;
     }
 }
 
@@ -67,7 +69,7 @@ div.botoes{
     font-family: var(--padrao);
     text-align: center;
 
-    animation: botoes 3s infinite alternate;
+    animation: botoes 8s infinite alternate;
 }
 
 @keyframes botoes{
