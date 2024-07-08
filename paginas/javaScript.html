@@ -29,7 +29,7 @@
             <p>Crie um programa que leia um número real qualquer pelo teclado e mostre na tela a sua porção Inteira.</p>
             <div class="js">
                 <label for="numeroId">Numero Real: </label>
-                <input type="number" name="numero" id="numeroId" oninput="numeroReal(um)">
+                <input type="number" name="numero" id="numeroId" oninput="ex001(um)">
                 <div class="resultado" id="um"></div>
             </div>
 
@@ -37,9 +37,9 @@
             <p>Faça um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo. Calcule e mostre o comprimento da hipotenusa.</p>
             <div class="js">
                 <label for="opostoId">Oposto: </label>
-                <input type="number" name="oposto" id="opostoId" oninput="hipotenusa(opostoId, adjacenteId, dois)">
+                <input type="number" name="oposto" id="opostoId" oninput="ex002(opostoId, adjacenteId, dois)">
                 <label for="adjacenteId">Adjacente: </label>
-                <input type="number" name="adjacente" id="adjacenteId" oninput="hipotenusa(opostoId, adjacenteId, dois)">
+                <input type="number" name="adjacente" id="adjacenteId" oninput="ex002(opostoId, adjacenteId, dois)">
                 <div class="resultado" id="dois" ></div>
             </div>
 
@@ -47,7 +47,7 @@
             <p>Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.</p>
             <div class="js">
                 <label for="anguloId">Angulo: </label>
-                <input type="number" name="angulo" id="anguloId" oninput="angulo(this, tres)">
+                <input type="number" name="angulo" id="anguloId" oninput="ex003(this, tres)">
                 <div class="resultado" id="tres"></div>
             </div>
 
@@ -62,9 +62,30 @@
                 <input type="text" name="aluno3" id="aluno3Id">
                 <label for="aluno4Id">Aluno 4:</label>
                 <input type="text" name="aluno4" id="aluno4Id">
-                <input type="submit" value="Sortear" onclick="aluno(quatro)">
+                <input type="submit" value="Sortear" onclick="ex004(quatro)">
 
                 <div class="resultado" id="quatro"></div>
+            </div>
+
+            <h2>Exercicio 05</h2>
+            <p>O mesmo professor do desafio 19 quer sortear a ordem de apresentação de trabalhos dos alunos. Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada.</p>
+            <p>Observação: Será usado os nomes dos alunos que foram inseridos no exercicio anterior</p>
+            <div class="js">
+                <input type="submit" value="Sortear" onclick="ex005(cinco)">
+                <div class="resultado" id="cinco"></div>
+            </div>
+
+            <h2>Exercicio 06</h2>
+            <p>6: Crie um programa que leia o nome completo de uma pessoa e mostre:</p>
+                <ol>
+                    <li>O nome com todas as letras maiúsculas e minúsculas.</li>
+                    <li>Quantas letras ao todo (sem considerar espaços).</li>
+                    <li>Quantas letras tem o primeiro nome.</li>
+                </ol>
+            <div class="js">
+                <label for="nome" class="nome">Nome: </label>
+                <input type="text" name="nome" id="nomeCompleto" placeholder="Nome Completo" oninput="ex006(seis)">
+                <div class="resultado" id="seis"></div>
             </div>
         </section>
     </main>

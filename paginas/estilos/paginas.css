@@ -190,8 +190,23 @@ div.js > label{
     text-transform: uppercase;
 }
 
+div.js > label.nome{
+    width: 25%;
+}
+
 div.js > input{
     width: 45%;
+    margin: 3px 0px;
+    padding: 5px 0px;
+
+    text-align: center;
+    font-size: 1.2em;
+
+    border: 1px solid var(--cor2);
+}
+
+div.js > input#nomeCompleto{
+    width: 70%;
     margin: 3px 0px;
     padding: 5px 0px;
 
