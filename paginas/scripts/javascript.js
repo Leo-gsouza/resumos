@@ -1,3 +1,7 @@
+function ver(resolucao){
+    resolucao.style.display == 'block' ? resolucao.style.display = 'none' : resolucao.style.display = 'block'
+}
+
 function ex001(res){
     let numero = document.getElementById('numeroId').value
     res.innerHTML = `Valor inteiro é ${parseInt(numero)}`

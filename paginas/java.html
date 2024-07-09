@@ -8,6 +8,7 @@
     <title>JavaScript</title>
 </head>
 <body>
+
     <header>
         <h1>JavaScript</h1>
         <span class="material-symbols-outlined" id="icon">widgets</span>
@@ -20,6 +21,7 @@
             <a href="../paginas/css3.html">CSS3</a>
         </div>
     </menu>
+
     <main>
         <section class="texto">
             <h2>Introdução</h2>
@@ -27,6 +29,38 @@
 
             <h2>Exercicio 01</h2>
             <p>Crie um programa que leia um número real qualquer pelo teclado e mostre na tela a sua porção Inteira.</p>
+            <p class="resolucao" onclick="ver(res1)">Clique para ver a resolução</p>
+            <div class="java" id="res1">
+                <pre>
+                    <code>
+HTML
+label for="numeroId">Numero Real: 
+input type="number" name="numero" id="numeroId" oninput="ex001(um)"
+div class="resultado" id="um">
+
+SCRIPT
+function ex001(res){
+    let numero = document.getElementById('numeroId').value
+    res.innerHTML = `Valor inteiro é ${parseInt(numero)}`
+    
+}
+
+<h2>Explicação</h2>
+HTML
+Foi inserido um oninput no input:number
+com o nome da função ex001 com o parametro
+um que é o Id da div para exibir o resultado.
+O oninput dá o resultado instantaneo
+
+SCRIPT
+Foi inserido na variavel numero o valor 
+do input:number por meio do Id.
+Para inserir um valor inteiro foi usado 
+o parseInt que exibe apenas numeros inteiros
+                    </code>
+                </pre>
+            </div>
+
             <div class="js">
                 <label for="numeroId">Numero Real: </label>
                 <input type="number" name="numero" id="numeroId" oninput="ex001(um)">
@@ -35,6 +69,40 @@
 
             <h2>Exercicio 2</h2>
             <p>Faça um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo. Calcule e mostre o comprimento da hipotenusa.</p>
+            <p class="resolucao" onclick="ver(res2)">Clique para ver a resolução</p>
+            <div class="java" id="res2">
+                <pre>
+                    <code>
+HTML
+<strong>label</strong> for="opostoId">Oposto: 
+<strong>input</strong> type="<strong>number</strong>" name="oposto" <strong>id="opostoId"</strong> <strong>oninput</strong>="<strong>ex002(opostoId, adjacenteId, dois)</strong>"
+<strong>label</strong> for="adjacenteId">Adjacente:
+<strong>input</strong> type="<strong>number</strong>" name="adjacente" <strong>id="adjacenteId"</strong> <strong>oninput</strong>="<strong>ex002(opostoId, adjacenteId, dois)</strong>"
+<strong>div</strong> class="resultado" <strong>id="dois</strong>"  
+
+SCRIPT
+function <strong>ex002(opo, adj, res)</strong>{
+    <strong>let</strong> adjacente = <strong>Number(adj.value)</strong>
+    <strong>let</strong> oposto = <strong>Number(opo.value)</strong>
+    <strong>res.innerHTML</strong> = `Hipotenusa = ${((oposto**2 + adjacente**2) **0.5).toFixed(2)}`
+}
+
+<h2>Explicação</h2>
+HTML
+Foi usado dois <strong>input:number</strong> com <strong>oninput</strong>
+<strong>Oninput</strong> com a função ex002 e <strong>tres parametros</strong>
+sendo ele, os dois <strong>inputs</strong> e a <strong>div</strong> que exibe
+o resultado.
+
+JAVASCRIPT 
+Criado duas variaveis com os valores
+dos <strong>inputs</strong>. Foi realizado uma operação 
+matematica para encontrar o valor e exibir
+como resposta
+                    </code>
+                </pre>
+            </div>
+
             <div class="js">
                 <label for="opostoId">Oposto: </label>
                 <input type="number" name="oposto" id="opostoId" oninput="ex002(opostoId, adjacenteId, dois)">
