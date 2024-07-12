@@ -167,7 +167,7 @@ dentro da lista um por vez.
             </div>
 
             <h2>Exercicio 06</h2>
-            <p>22: Crie um programa que leia o nome completo de uma pessoa e mostre:</p>
+            <p>Crie um programa que leia o nome completo de uma pessoa e mostre:</p>
             <ol type="1">
                 <li>O nome com todas as letras maiúsculas e minúsculas.</li>
                 <li>Quantas letras ao todo (sem considerar espaços).</li>
@@ -226,6 +226,62 @@ maiúsculo e .<strong>lower()</strong> para minúsculo.
                 </pre>
             </div>
 
+            <h2>Exercicio 07</h2>
+            <p>Faça um programa que leia um número de 0 a 9999 e mostre na tela cada um dos dígitos separados</p>
+            <p class="resolucao" onclick="ver(sete)">Clique aqui para ver a resolução</p>
+            <div class="python" id="sete">
+                <pre>
+                    <code>
+from <strong>random</strong> import <strong>randint</strong>
+
+numero = <strong>randint(0, 9999)</strong>
+unidade = numero <strong>//</strong> 1 <strong>%</strong> 10
+dezena = numero <strong>//</strong> 10 <strong>%</strong> 10
+centena = numero <strong>//</strong> 100 <strong>%</strong> 10
+milhar = numero <strong>//</strong> 1000 <strong>%</strong> 10
+
+print(f'Numero sorteado = {numero}\
+      \nUnidade = {unidade}\
+      \nDezena = {dezena}\
+      \nCentena = {centena}\
+      \nMilhar = {milhar}')
+
+<h2>Explicação</h2>
+Importado da biblioteca <strong>Random</strong>
+o metodo <strong>randint</strong> para sortear
+numero
+
+Realizado calculos matematicos
+usando <strong>divisão inteira //</strong> e 
+<strong>resto da divisão % </strong> para 
+encontrar os valores
+                    </code>
+                </pre>
+            </div>
+
+            <h2>Exercicio 08</h2>
+            <p>Crie um programa que leia o nome de uma cidade diga se ela começa ou não com o nome “SANTO”.</p>
+            <p class="resolucao" onclick="ver(oito)">Clique aqui para ver a resolução</p>
+            <div class="python" id="oito">
+                <pre>
+                    <code>
+cidade = str(input('Nome da cidade: '))<strong>.lower().strip()</strong>
+santo = "começa com Santo" <strong>if cidade[:5]</strong> == "santo" else "Não começa com Santo"
+print(santo)
+
+<h2>Explicação</h2>
+Usado <strong>strip()</strong> e <strong>lower()</strong> na variavel 
+cidade para evitar evitar os erros
+de digitação de espaços inseridos ou 
+letras maiusculas e minusculas
+
+Usado um <strong>if ternario</strong> que vai consultar 
+se as <strong>cinco primeiras letras</strong> da variavel 
+<strong>cidade[:5]</strong> é <strong>igual a santo</strong>. Se for vai 
+retornar um resultado e se não for outro
+                    </code>
+                </pre>
+            </div>
         </section>
     </main>
 

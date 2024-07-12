@@ -113,6 +113,59 @@ como resposta
 
             <h2>Exercicio 03</h2>
             <p>Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.</p>
+            <p class="resolucao" onclick="ver(res3)">Clique para ver a resolução</p>
+            <div class="java" id="res3">
+                <pre>
+                    <code>
+HTML
+label for="anguloId">Angulo:
+<strong>input type="number</strong>" name="angulo" <strong>id="anguloId"</strong> <strong>oninput="ex003(this, tres)</strong>">
+div class="resultado" <strong>id="tres"</strong>>
+
+<strong></strong>
+SCRIPT
+function <strong>ex003(valor, res)</strong>{
+    let <strong>angulo</strong> = <strong>Number(valor.value)</strong>
+    let <strong>radianos</strong> = angulo*3.141592653/180
+
+    let <strong>seno</strong> = radianos - (radianos**3/6) + (radianos**5/120) - (radianos**7/5040)
+    let <strong>cosseno</strong> = 1 - (radianos**2/2) + (radianos**4/24) - (radianos**6/720)
+    let <strong>tangente</strong> = seno/cosseno
+
+    <strong>res.innerHTML</strong> =  `<strong>Seno</strong> = ${seno.toFixed(3)}<br><strong>Cosseno</strong> = ${cosseno.toFixed(3)}<br><strong>Tangente</strong> = ${tangente.<strong>toFixed(3)</strong>}`
+}
+
+<h2>Explicação</h2>
+HTML 
+Foi inserido um <strong>input number</strong> e um 
+<strong>oninput</strong> com a <strong>função ex003</strong> que carrega 
+dois parametros, o <strong>valor de input</strong> e a 
+<strong>div com id tres</strong> que tem o objetivo de 
+exibir o resultado
+
+SCRIPT
+Esta <strong>função</strong> para encontrar o <strong>seno</strong>, <strong>cosseno</strong> 
+e <strong>tangente</strong> de um angulo foi feita utilizando
+calculos matematicos.
+
+primeiro foi criado uma<strong>
+     variavel para
+    receber o valor do angulo digitado em input
+</strong>. 
+Na sequencia foi criado <strong>variaveis</strong> para <strong>seno</strong>, 
+<strong>cosseno</strong>, <strong>tangente</strong> e <strong>radianos</strong>.
+
+Os valores atribuidos a essas variaveis 
+foram realizados com a formula criada. 
+
+O resultado foi exibido pela <strong>div com id tres</strong>. 
+Note que foi usado <strong>toFixed(3)</strong> para abreviar
+o numeros com apenas 3 casas decimais 
+
+                    </code>
+                </pre>
+            </div>
+            
             <div class="js">
                 <label for="anguloId">Angulo: </label>
                 <input type="number" name="angulo" id="anguloId" oninput="ex003(this, tres)">
