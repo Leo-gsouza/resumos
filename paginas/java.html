@@ -174,6 +174,122 @@ o numeros com apenas 3 casas decimais
 
             <h2>Exercicio 04</h2>
             <p>Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome dos alunos e escrevendo na tela o nome do escolhido.</p>
+            <p class="resolucao" onclick="ver(res4)">Clique para ver a resolução</p>
+            <div class="java" id="res4">
+                <pre>
+                    <code>
+HTML
+div class="js">
+    label for="aluno1Id">Aluno 1:
+    <strong><strong>input type="text"</strong> name="aluno1" <strong>id="aluno1Id</strong>"></strong>
+
+    label for="aluno2Id">Aluno 2:
+    <strong>input type="text"</strong> name="aluno2" <strong>id="aluno2Id</strong>">
+
+    label for="aluno3Id">Aluno 3:
+    <strong>input type="text"</strong> name="aluno3" <strong>id="aluno3Id</strong>">
+
+    label for="aluno4Id">Aluno 4:
+    <strong>input type="text"</strong> name="aluno4" <strong>id="aluno4Id"</strong>>
+
+    <strong>input type="submit"</strong> value="Sortear" <strong>onclick="ex004(quatro)</strong>">
+
+    div class="resultado" <strong>id="quatro"</strong>>
+div
+
+SCRIPT
+function ex004(resultado){
+    <strong>const aluno1</strong> = document.getElementById('<strong>aluno1Id</strong>').<strong>value</strong>
+    <strong>const aluno2</strong> = document.getElementById('<strong>aluno2Id</strong>').<strong>value</strong>
+    <strong>const aluno3</strong> = document.getElementById('<strong>aluno3Id</strong>').<strong>value</strong>
+    <strong>const aluno4</strong> = document.getElementById('<strong>aluno4Id</strong>').<strong>value</strong>
+
+    <strong>const alunos = []</strong>
+    <strong>if</strong> (<strong>aluno1</strong>) <strong>alunos.push(aluno1</strong>)
+    <strong>if</strong> (aluno2) alunos.push(aluno2)
+    <strong>if</strong> (aluno3) alunos.push(aluno3)
+    <strong>if</strong> (aluno4) alunos.push(aluno4)
+
+    <strong>if (alunos.length > 0</strong>){
+        <strong>const indice</strong> = <strong>Math.floor(Math.random() * alunos.length)</strong>
+        <strong>const sorteado</strong> = <strong>alunos[indice]</strong>
+        <strong>resultado.innerHTML</strong> =  `${sorteado}`
+    }
+}   
+
+<h2>Explicação</h2>
+HTML 
+1-Criado <strong>4 input:texto</strong> para inserir
+o nome dos quatro alunos.
+2-<strong>Cada input tem um Id </strong>para ser chamado
+no script.
+3-Criado um <strong>input:submit</strong> que é um botão 
+com um <strong>onclick</strong> que carrega a <strong>função ex004</strong>
+e  o <strong>parametro quatro</strong> que é o Id da div 
+abaixo.
+4-Criado a <strong>div com o Id quatro</strong> para exibir 
+o resultado no script
+
+SCRIPT 
+1-Criado <strong>4 const com os Ids dos input:texto</strong>
+que representam o nome dos quatro alunos
+2- Criado uma <strong>lista vazia</strong>
+3- Usado a <strong>
+    condição SE para inserir o aluno
+    na lista
+</strong> caso ele exista, usando o push:
+<strong>lista.push(variavel)</strong>
+4-Usado a <strong>
+    condição SE para verificar se a
+    lista é maior do que 0
+</strong>
+5- Criado uma <strong>
+    const chamada de indice que
+    tem como objetivo retornar um indice
+</strong> dentro 
+da lista, se a lista tiver 5 elementos, vai 
+retornar um valor de 0 a 4
+6-Criado uma <strong>const com o nome sorteado</strong> que 
+carrega a lista alunos com o indice para 
+exibir apenas um dos elementos dentro da 
+lista
+7- Por fim foi <strong>
+    usado o parametro resultado
+    que representa a div
+</strong> para exibir o resultado 
+com <strong>innerHTML</strong> 
+<strong></strong>
+<h2>Aprofundar :</h2>
+<strong>const indice = Math.floor(Math.random() * alunos.length)</strong>
+
+analisar ponto por ponto do codigo
+para enteder melhor como ele é capaz
+de sortear um valor dentro da lista
+
+<strong>Math.floor()</strong> = arredonda o valor para cima
+ou para baixo.
+
+<strong>Math.Random()</strong> = seleciona um valor enteder
+0 e 1 que pode ser 0.2563 ou 0.852 etc
+
+<strong>alunos.lenght</strong> = o número de elementos dentro
+da lista.
+
+O que acontece com esse codigo:
+o valor gerado por <strong>Math.random</strong> é
+<strong>multiplicado</strong> <strong>pelo numero de elemento</strong>s 
+dentro da lista, exemplo: <strong>
+    0.256542 * 4
+    que vai retornar 1.026164.
+</strong>
+
+Em seguida o <strong>Math.floor vai arredondar</strong>.
+Como o valor está mais proximo de 1, a 
+cont indice vai valer 1
+
+                    </code>
+                </pre>
+            </div>
             <div class="js">
                 <label for="aluno1Id">Aluno 1:</label>
                 <input type="text" name="aluno1" id="aluno1Id">
@@ -191,23 +307,160 @@ o numeros com apenas 3 casas decimais
             <h2>Exercicio 05</h2>
             <p>O mesmo professor do desafio 19 quer sortear a ordem de apresentação de trabalhos dos alunos. Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada.</p>
             <p>Observação: Será usado os nomes dos alunos que foram inseridos no exercicio anterior</p>
+            <p class="resolucao" onclick="ver(res5)">Clique para ver a resolução</p>
+            <div class="java" id="res5">
+                <pre>
+                    <code>
+HTML 
+div class="js">
+input type="submit" value="Sortear" onclick="ex005(cinco)">
+div class="resultado" id="cinco">
+/div>
+
+SCRIPT
+function <strong>ex005(resultado)</strong>{
+    const aluno1 = document.getElementById('<strong>aluno1Id').value</strong>
+    const aluno2 = document.getElementById('<strong>aluno2Id').value</strong>
+    const aluno3 = document.getElementById('<strong>aluno3Id').value</strong>
+    const aluno4 = document.getElementById('<strong>aluno4Id').value</strong>
+<strong></strong>
+    const alunos = []
+    <strong>if (aluno1) alunos.push(aluno1)</strong>
+    if (aluno2) alunos.push(aluno2)
+    if (aluno3) alunos.push(aluno3)
+    if (aluno4) alunos.push(aluno4)
+
+    <strong>alunos.sort(() => Math.random() - 0.5)</strong>
+
+    resultado.innerHTML = `${alunos}`
+}
+
+<h2>Explicação</h2>
+HTML 
+Não existem os campos para inserir 
+o nome dos alunos neste exercicio.
+Foi <strong>
+    reutilizado os nomes inseridos
+    no exercicio anterior
+</strong>.
+
+1- <strong>Input:submit</strong> = botão para
+executar a <strong>função ex005</strong>
+2- <strong>Div#cinco</strong> = objetivo de 
+<strong>exibir o resultado da função</strong>
+
+SCRIPT 
+1- Criado <strong>quatro constantes</strong>
+com o nome dos alunos inseridos
+no campo do exercicio anterior
+
+2-<strong>
+    Criado uma lista com a condição
+    SE para adicionar o alunos na lista
+    caso ele exista
+</strong>
+
+3-Usado o <strong>
+    metodo sort para ordenar
+    a lista
+</strong>. Dentro do metodo é exigido
+uma <strong>função sem parametros</strong> com o metodo
+<strong>math.random menos 0.5 </strong>que vai resultar
+em um valor entre <strong>-0.5 e 0.5.</strong> Quando o 
+<strong>
+    valor for negativo o elemento da lista
+    vai ficar antes e quando positivo depois
+</strong>
+
+
+                    </code>
+                </pre>
+
+            </div>
             <div class="js">
                 <input type="submit" value="Sortear" onclick="ex005(cinco)">
                 <div class="resultado" id="cinco"></div>
             </div>
 
             <h2>Exercicio 06</h2>
-            <p>6: Crie um programa que leia o nome completo de uma pessoa e mostre:</p>
+            <p>Crie um programa que leia o nome completo de uma pessoa e mostre:</p>
                 <ol>
                     <li>O nome com todas as letras maiúsculas e minúsculas.</li>
                     <li>Quantas letras ao todo (sem considerar espaços).</li>
                     <li>Quantas letras tem o primeiro nome.</li>
                 </ol>
+            <p class="resolucao" onclick="ver(res6)">Clique aqui paraver a resolução</p>
+            <div class="java" id="res6">
+                <pre>
+                    <code>
+HTML
+div class="js">
+label for="nome" class="nome">Nome:
+<strong>input type="text"</strong> name="nome" <strong>id="nomeCompleto"</strong> <strong>oninput="ex006(seis)"</strong> placeholder="Nome Completo">
+div class="resultado" <strong>id="seis"</strong>>
+
+SCRIPT
+function ex006(resultado){
+    const nome = document.getElementById<strong>('nomeCompleto').value</strong>
+    
+    const primeiro = <strong>nome.slice(0, nome.indexOf(' '))</strong>
+    const ultimo = <strong>nome.slice(nome.lastIndexOf(' ') + 1)</strong>
+    const maiusculo = <strong>nome.toUpperCase()</strong>
+    const minusculo = <strong>nome.toLowerCase()</strong>
+    const espacos = <strong>nome.split(' ').length -1</strong>
+    const caracteres = <strong>nome.length - espacos</strong>
+
+    resultado.innerHTML = `Primeiro nome: ${primeiro}
+    Ultimo nome: ${ultimo} 
+    Maiusculo: ${maiusculo}
+    Minusculo: ${minusculo} 
+    Letras: ${caracteres}`
+}
+
+<h2>Explicação</h2>
+HTML
+1- Criado um <strong>input:texto</strong> com 
+uma <strong>função oninput ex006</strong> com 
+o <strong>parametro da div abaixo</strong> para 
+exibir o resultado simutaneamente
+
+SCRIPT 
+1- criado <strong>7 constantes</strong> 
+2 - Extrair o primeiro nome foi usado
+slice seguido de 0 que indica o primeira
+letra até o primeiro espaço. O ultimo nome é usado
+o <strong>slice</strong> que inicia em um indice e vai
+ate o fim se este não for informado e 
+dentro do slice é usando o <strong>lastIndexOf(' ')</strong>
+com um <strong>espaço dentro</strong>, o que indica que é
+buscado o indice do ultimo espaço. O <strong>+ 1</strong>
+é para somar com o indice do espaço e iniciar 
+na letra seguinte
+3-Deixar o nome em maiusculo é usado 
+a variavel seguida de <strong>.toUpperCase()</strong> e 
+<strong>.toLowerCase</strong> para minusculo
+4-Metodo <strong>split</strong> transforma a variavel
+em uma lista. Em seguida é iserido um 
+<strong>lenght - 1  que tem o objetivo de dar </strong>
+o numero de elementos dentro da lista 
+e subtrair 1, pois este sera o valor
+de espaços entre a variavel. 
+5- Para saber o numero de letras total 
+foi ultizado o <strong>lenght</strong> na variavel nome 
+<strong>menos os</strong> <strong>espaços</strong> que foram contados
+        
+                    </code>
+                </pre>
+            </div>
             <div class="js">
                 <label for="nome" class="nome">Nome: </label>
                 <input type="text" name="nome" id="nomeCompleto" placeholder="Nome Completo" oninput="ex006(seis)">
                 <div class="resultado" id="seis"></div>
             </div>
+
+            <h2>Exercicio 07</h2>
+            <p>Faça um programa que leia um número de 0 a 9999 e mostre na tela cada um dos dígitos separados.</p>
+
         </section>
     </main>
 

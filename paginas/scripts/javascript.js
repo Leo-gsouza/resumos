@@ -41,8 +41,7 @@ function ex004(resultado){
         const indice = Math.floor(Math.random() * alunos.length)
         const sorteado = alunos[indice]
         resultado.innerHTML =  `${sorteado}`
-
-    }else{resultado.innerHTML = `Ninguém`}
+    }
 }
 
 function ex005(resultado){
