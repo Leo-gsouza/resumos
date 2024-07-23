@@ -75,3 +75,33 @@ function ex006(resultado){
     <br>Ultimo nome: ${ultimo} <br>Maiusculo: ${maiusculo}\
     <br>Minusculo: ${minusculo} <br>Letras: ${caracteres}`
 }
+
+function ex007(resultado){
+    let numero = document.getElementById('numeroId7').value
+    let unidade = Math.floor(numero / 1) % 10
+    let dezena = Math.floor(numero / 10) % 10
+    let centena = Math.floor(numero / 100) % 10
+    let milhar = Math.floor(numero/1000) % 10
+
+    resultado.innerHTML = `Unidade = ${unidade}\
+    <br>Dezena = ${dezena}\
+    <br>Centena = ${centena}\
+    <br>Milhar = ${milhar}`
+}
+
+function ex008(cid, resultado){
+    let cidade = String(cid.value)
+    if (cidade.substring(0,5).toUpperCase() == 'SANTO'){
+        resultado.innerHTML = `Sim! a cidade começa com Santo`
+    }else{resultado.innerHTML = `A cidade não começa com Santo`}
+}
+
+function ex009(name, resultado){
+    let nome = String(name.value)
+    let separado = nome.split(" ")
+    let primeiro = separado[0]
+    let ultimo = separado[separado.length - 1]
+
+    resultado.innerHTML = `Primeiro nome = ${primeiro}\
+    <br>Ultimo nome: ${ultimo}`
+}

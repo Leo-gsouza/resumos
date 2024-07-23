@@ -282,6 +282,131 @@ retornar um resultado e se não for outro
                     </code>
                 </pre>
             </div>
+
+            <h2>Exercicio 09</h2>
+            <p>Crie um programa que leia o nome de uma pessoa e diga se ela tem “SILVA” no nome.</p>
+            <p class="resolucao" onclick="ver(nove)">Clique aqui para ver a resolução</p>
+            <div class="python" id="nove">
+                <pre>
+                    <code>
+nome = <strong>str</strong>(<strong>input</strong>('Nome completo: ')).<strong>upper()</strong>
+
+<strong>if</strong> 'SILVA' <strong>in</strong> nome:
+    <strong>print</strong>('Tem silva no nome')
+<strong>else</strong>:
+    <strong>print</strong>('Não tem silva no nome')
+
+<h2>Explicação</h2>
+1- Usado <strong>upper()</strong> para deixar o nome 
+em maiusculo e evitar possiveis erros 
+na digitação do usuario
+2- Usado a condição <strong>SE</strong> acompanhada de <strong>IN</strong> 
+para vereficar se tem a <strong>string</strong> 'SILVA' 
+na <strong>variavel</strong>
+                    </code>
+                </pre>
+            </div>
+
+            <h2>Exercicio 10</h2>
+            <p>Faça um programa que leia uma frase pelo teclado e mostre quantas vezes aparece a letra “A”, em que posição ela aparece a primeira vez e em que posição ela aparece a última vez.</p>
+            <p class="resolucao" onclick="ver(dez)">Clique aqui para ver a resolução</p>
+            <div class="python" id="dez">
+                <pre>
+                    <code>
+frase = 'Eu gosto de estudar programação todos os dias'<strong>.strip().lower()</strong>
+frase = frase.<strong>replace</strong>('ã', 'a')
+frase = frase.<strong>replace</strong>('â', 'a')
+frase = frase.<strong>replace</strong>('á', 'a')
+frase = frase.<strong>replace</strong>('à', 'a')
+
+qttd = frase.<strong>count</strong>('a')
+primeira = frase.<strong>find</strong>('a') + 1
+ultima = frase.<strong>rfind</strong>('a') + 1
+
+print(f'Existem {qttd} de letras "a" no texto\
+      \nA primeira letra se encontra na posição {primeira}\
+      \nA ultima letra se encontra na posição {ultima}')
+
+<h2>Explicação</h2>
+1- <strong>Strip()</strong> para remover espaços
+<strong>2- Lower() para converter todo o texto </strong>
+em minusculo 
+3- <strong>Replace()</strong> para substituir todos os a 
+com acentos pelo a sem acento 
+4- <strong>Count()</strong> para contar a quantidade de a 
+5- <strong>Find()</strong> para encontrar o primeiro a 
+6- <strong>Rfind()</strong> para encontrar o ultimo a
+
+Obeservação: Note que sem trocar os 'a' 
+com acento pelo 'a' sem acento, as 
+informações passadas pelo <strong>COUNT</strong>, <strong>FIND</strong>
+<strong>RFIND</strong> não seriam exatas, visto que as 
+letras acentuadas não seriam consideradas
+                    </code>
+                </pre>
+            </div>
+
+            <h2>Exercicio 11</h2>
+            <p>Faça um programa que leia o nome completo de uma pessoa, mostrando em seguida o primeiro e o último nome separadamente.</p>
+            <p class="resolucao" onclick="ver(onze)">Clique aqui para ver a resolução</p>
+            <div class="python" id="onze">
+                <pre>
+                    <code>
+nome = <strong>str</strong>(<strong>input</strong>('Nome completo: ')).<strong>strip</strong>().<strong>title</strong>()
+
+primeiro = nome.<strong>find</strong>(' ')
+ultimo = nome.<strong>rfind</strong>(' ') + 1
+
+print(nome[:primeiro])
+print(nome[ultimo:])
+
+<h2>Explicação</h2>
+1- <strong>Strip</strong> = Remover espaços digitados
+no inicio ou fim pelo usuario.
+2 - <strong>Title</strong> = Deixar a inicial de todas
+as palavras em maiusculo. 
+3 - <strong>Find</strong> = Encontrar a posição do 
+primeiro espaço. 
+4- <strong>Rfind</strong> = Econtrar a posição do 
+ultimo espaço
+5- <strong>+1</strong> Selecionar o texto sem incluir o 
+espaço nele 
+                    </code>
+                </pre>
+            </div>
+
+            <h2>Exercicio 12</h2>
+            <p>Escreva um programa que faça o computador “pensar” em um número inteiro entre 0 e 5 e peça para o usuário tentar descobrir qual foi o número escolhido pelo computador. O programa deverá escrever na tela se o usuário venceu ou perdeu.</p>
+            <p class="resolucao" onclick="ver(doze)">Clique aqui para ver a resolução</p>
+            <div class="python" id="doze">
+                <pre>
+                    <code>
+from <strong>random</strong> import <strong>randint</strong>
+
+numero = int(input('Digite um numero entre 0 e 5: '))
+computador = <strong>randint</strong>(0,5)
+
+print(f'Computador escolheu = {computador}\
+      \nJogador escolheu = {numero}')
+
+<strong>if</strong> numero <strong>==</strong> computador:
+    print('Acertou!')
+<strong>else</strong>:
+    print('Errou!')
+
+<h2>Explicação</h2>
+1- Importar o metodo <strong>randint</strong> da 
+biblioteca <strong>random</strong>. 
+2 -Criar uma <strong>variavel</strong> para o usuario 
+digitar um valor entre 0 e 5
+3- (0,5) Atribuir o <strong>radint</strong> a uma variavel
+para esolher um valor entre 0 e 5
+4- Condição <strong>SE</strong> para verificar se o valor 
+digitado pelo ussuario é <strong>igual</strong> o valor 
+escolhido pelo computador
+                    </code>
+                </pre>
+            </div>
         </section>
     </main>
 

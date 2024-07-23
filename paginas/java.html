@@ -389,10 +389,11 @@ em um valor entre <strong>-0.5 e 0.5.</strong> Quando o
                     <li>Quantas letras ao todo (sem considerar espaços).</li>
                     <li>Quantas letras tem o primeiro nome.</li>
                 </ol>
-            <p class="resolucao" onclick="ver(res6)">Clique aqui paraver a resolução</p>
+            <p class="resolucao" onclick="ver(res6)">Clique aqui para ver a resolução</p>
             <div class="java" id="res6">
                 <pre>
                     <code>
+
 HTML
 div class="js">
 label for="nome" class="nome">Nome:
@@ -460,6 +461,89 @@ foi ultizado o <strong>lenght</strong> na variavel nome
 
             <h2>Exercicio 07</h2>
             <p>Faça um programa que leia um número de 0 a 9999 e mostre na tela cada um dos dígitos separados.</p>
+            <p class="resolucao" onclick="ver(res7)">Clique aqui para ver a resolução</p>
+            <div class="java" id="res7">
+                <pre>
+                    <code>
+HTML 
+div class="js">
+    label for="<strong>numeroId7</strong>">Numero:/label>
+    <strong>input type="number</strong>" name="numero" id="<strong>numeroId7</strong>" <strong>oninput="ex007(sete)</strong>" placeholder="0 á 9999">
+    div class="resultado" <strong>id="sete"</strong> <strong>oninput="ex007(sete)</strong>">/div>
+
+SCRIPT 
+function ex007(resultado){
+    let numero = <strong>document.getElementById('numeroId7').value</strong>
+    let unidade = <strong>Math.floor</strong>(numero / 1) <strong>%</strong> 10
+    let dezena = Math.floor(numero / 10) <strong>%</strong> 10
+    let centena = <strong>Math.floor</strong>(numero / 100) <strong>%</strong> 10
+    let milhar = <strong>Math.floor</strong>(numero/1000) <strong>%</strong> 10
+
+    <strong>resultado.innerHTML</strong> = `Unidade = ${unidade}\
+    br>Dezena = ${dezena}\
+    br>Centena = ${centena}\
+    br>Milhar = ${milhar}`
+}
+
+<h2>Explicação</h2>
+HTML 
+1 - <strong>Input:number</strong> com <strong>Id numeroId7</strong> e 
+<strong>oninput com a função ex007() com o </strong>
+parametro <strong>sete</strong> que é a div abaixo 
+que exibe o resultado
+2 - <strong>Div</strong> para exibir o resultado que 
+precisa d função <strong>oninput</strong> tambem.
+
+SCRIPT 
+1 - Foi atribuido a <strong>variavel numero </strong>
+o valor de entrada <strong>input</strong> com o <strong>ID</strong>
+2 - <strong>Math.floor</strong> = para divisão inteira
+3 - <strong>%</strong> para resto da divisão
+
+                    </code>
+                </pre>
+            </div>
+
+            <div class="js">
+                <label for="numeroId7">Numero:</label>
+                <input type="number" name="numero" id="numeroId7" oninput="ex007(sete)" placeholder="0 á 9999">
+                <div class="resultado" id="sete" oninput="ex007(sete)"></div>
+            </div>
+
+            <h2>Exercicio 08</h2>
+            <p>Crie um programa que leia o nome de uma cidade diga se ela começa ou não com o nome “SANTO”.</p>
+            <p class="resolucao" onclick="ver(res8)">Clique aqui para ver a resolução</p>
+            <div class="java" id="res8">
+                <pre>
+                    <code>
+
+                    </code>
+                </pre>
+            </div>
+
+            <div class="js">
+                <label for="cidadeId8">Cidade: </label>
+                <input type="text" name="cidade" id="cidadeId8">
+                <input type="submit" value="Conferir" onclick="ex008(cidadeId8, oito)">
+                <div class="resultado" id="oito"></div>
+            </div>
+
+            <h2>Exercicio 9</h2>
+            <p>Crie um programa que leia o nome de uma pessoa e diga se ela tem “SILVA” no nome.</p>
+            <p class="resolucao" onclick="ver(res9)">Clique aqui para ver a resolução</p>
+            <div class="java" id="res9">
+                <pre>
+                    <code>
+
+                    </code>
+                </pre>
+            </div>
+
+            <div class="js">
+                <label for="nomeId9">Nome Completo:</label>
+                <input type="text" name="Nome" id="nomeId9" oninput="ex009(nomeId9, nove)">
+                <div class="resultado" id="nove" oninput="ex009(nomeId9, nove)"></div>
+            </div>
 
         </section>
     </main>
