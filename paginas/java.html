@@ -516,6 +516,48 @@ o valor de entrada <strong>input</strong> com o <strong>ID</strong>
             <div class="java" id="res8">
                 <pre>
                     <code>
+HTML 
+div class="js">
+    label for="<strong>cidadeId8</strong>">Cidade: /label>
+    <strong>input type="text</strong>" name="cidade" <strong>id="cidadeId8"</strong>>
+    <strong>input type="submit</strong>" value="Conferir" <strong>onclick="ex008(cidadeId8, oito)</strong>">
+    div class="resultado" <strong>id="oito"</strong>> /div>
+/div>
+
+<strong>SCRIPT </strong>
+function <strong>ex008(cid, resultado)</strong>{
+    let cidade = <strong>String(cid.value)</strong>
+    <strong>if</strong> (cidade.<strong>substring(0,6)</strong>.<strong>toUpperCase()</strong> == 'SANTO '){
+        resultado.<strong>innerHTML</strong> = `Sim! a cidade começa com Santo`
+    }else{resultado.<strong>innerHTML</strong> = `A cidade não começa com Santo`}
+}
+
+<h2>Explicação</h2>
+HTML 
+1 - <strong>Input Texto</strong> com <strong>Id</strong> para 
+inserir o nome da cidade. 
+2 - <strong>Input submit</strong> com uma <strong>
+    função
+    de
+</strong> click ex008 com <strong>dois parametros</strong>.
+o primeiro é o<strong> input text</strong>o e o
+segundo a <strong>div</strong> responsavel por 
+exibir o <strong>resultado</strong>
+3 - <strong>Div</strong> para exibir o <strong>resultado</strong> 
+com um <strong>Id</strong> 
+
+SCRIPT 
+<strong>1 - Variavel com o Id do input texto </strong>
+2 - <strong>Condição SE</strong> para checar as seis 
+primeiras letras da variavel. Para 
+realizar isso foi usado o <strong>substring (0,6)</strong>.
+Se as seis primeiras letras for <strong>igual</strong> a 
+SANTO (o espaço a frente também faz parte 
+da checagem) a <strong>condição é verdadeira</strong>.
+3 - <strong>toUpperCase</strong> foi usado para deixar 
+a variavel em maiusculo e evitar erros 
+na digitação do usuario
+
 
                     </code>
                 </pre>
@@ -531,7 +573,75 @@ o valor de entrada <strong>input</strong> com o <strong>ID</strong>
             <h2>Exercicio 9</h2>
             <p>Crie um programa que leia o nome de uma pessoa e diga se ela tem “SILVA” no nome.</p>
             <p class="resolucao" onclick="ver(res9)">Clique aqui para ver a resolução</p>
-            <div class="java" id="res9">
+            <strong>
+                <div class="java" id="res9">
+            </strong>
+                <pre>
+                    <code>
+HTML 
+div class="js">
+    label for="<strong>nomeId9</strong>">Nome Completo:/label>
+    <strong>input type="text"</strong> name="Nome" <strong>id="nomeId9"</strong> >
+    <strong>input type="submit"</strong> value="Conferir" <strong>onclick="ex009(nomeId9, nove)</strong>">
+    div class="resultado" <strong>id="nove"</strong> >/div>
+/div>
+
+SCRIPT 
+function <strong>ex009(name, resultado)</strong>{
+    let nome = <strong>String(name.value).toUpperCase()</strong>
+    let separado =<strong> nome.split(" ")</strong>
+    let ultimo = <strong>separado[separado.length - 1]</strong>
+
+    <strong>if</strong> (ultimo <strong>==</strong> 'SILVA'){
+        resultado.<strong>innerHTML</strong> = `Sim! Tem Silva no nome`
+    }else{
+        <strong>if </strong>(nome.<strong>includes</strong>(' SILVA ')){
+            resultado.<strong>innerHTM</strong>L = `Sim! Tem Silva no nome`
+        }<strong>else</strong>{
+            resultado.<strong>innerHTML</strong> = `Não tem Silva no nome`
+        }
+    }
+}
+<strong></strong>
+<h2>Explicação</h2>
+HTML 
+1 - <strong>Input texto</strong> para inserir o nome 
+com <strong>Id </strong>
+2 - <strong>Input submit</strong> com uma função <strong>click ex009() </strong> 
+com <strong>2 parametros</strong>, um deles o input 
+texto e o outro a Div para exibir o 
+resultado 
+3 - <strong>Div</strong> para exibir o resultado com um 
+<strong>Id</strong>
+
+SCRIPT
+1 - <strong>Variavel1</strong> para receber o nome do <strong>
+    input
+    texto.
+</strong> 
+2 -<strong> Variavel2</strong> para receber o nome em lista 
+usando o comando <strong>variavel.split(" ")</strong>
+3 - <strong>Variavel3</strong> para <strong>receber o ultimo elemento</strong> 
+da lista que foi criada com o split. Foi 
+usado o comando: 
+<strong>variavel2[variavel2.lenght - 1]</strong> para receber 
+o ultimo elemento da lista 
+                    </code>
+                </pre>
+            </div>
+
+            <div class="js">
+                <label for="nomeId9">Nome Completo:</label>
+                <input type="text" name="Nome" id="nomeId9" >
+                <input type="submit" value="Conferir" onclick="ex009(nomeId9, nove)">
+                <div class="resultado" id="nove" ></div>
+            </div>
+
+            <h2>Exercicio 10</h2>
+            <p>Faça um programa que leia uma frase pelo teclado e mostre quantas vezes aparece a letra “A”, em que posição ela aparece a primeira vez e em que posição ela aparece a última vez.
+            </p>
+            <p class="resolucao" onclick="ver(res10)">Clique aqui para ver a resolução</p>
+            <div class="java" id="res10">
                 <pre>
                     <code>
 
@@ -540,9 +650,27 @@ o valor de entrada <strong>input</strong> com o <strong>ID</strong>
             </div>
 
             <div class="js">
-                <label for="nomeId9">Nome Completo:</label>
-                <input type="text" name="Nome" id="nomeId9" oninput="ex009(nomeId9, nove)">
-                <div class="resultado" id="nove" oninput="ex009(nomeId9, nove)"></div>
+                <label for="fraseId10">Frase: </label>
+                <input type="text" name="frase" id="fraseId10">
+                <input type="submit" value="Buscar" onclick="ex010(dez)">
+                <div class="resultado" id="dez"></div>
+            </div>
+
+            <h2>Exercicio 11</h2>
+            <p>Faça um programa que leia o nome completo de uma pessoa, mostrando em seguida o primeiro e o último nome separadamente.</p>
+            <p class="resolucao" onclick="ver(res11)">Clique aqui para ver a resolução</p>
+            <div class="java" id="res11">
+                <pre>
+                    <code>
+
+                    </code>
+                </pre>
+            </div>
+
+            <div class="js">
+                <label for="nomeId11">Nome Completo</label>
+                <input type="text" name="nome" id="nomeId11" oninput="ex011(nomeId11, onze)">
+                <div class="resultado" id="onze" oninput="ex011(nomeId11, onze)"></div>
             </div>
 
         </section>

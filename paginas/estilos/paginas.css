@@ -174,7 +174,7 @@ div.js{
     justify-content: space-between;
     align-content: space-between;
     width: 280px;
-    margin: 10px 0px;
+    margin: 5px 0px;
     padding: 10px;
 
     color: white;
@@ -238,5 +238,21 @@ div.js > div.resultado{
 
 code > strong{
     color: yellow;
+}
+
+div.resultado{
+    display: none;
+    margin-top: 5px;
+
+    color: #1A1E29;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid var(--cor2);
+}
+
+div.resultado > p{
+    width: 200px;
+    margin: auto;
+    text-align: left;
 }
 
