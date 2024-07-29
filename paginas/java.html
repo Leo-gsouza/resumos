@@ -644,6 +644,68 @@ o ultimo elemento da lista
             <div class="java" id="res10">
                 <pre>
                     <code>
+HTML 
+div class="js">
+    label for="<strong>fraseId10</strong>">Frase: /label>
+    <strong>input type="text"</strong> name="frase" <strong>id="fraseId10</strong>">
+    <strong>input type="submit</strong>" value="Buscar" <strong>onclick="ex010(dez)</strong>">
+    div class="resultado" <strong>id="dez</strong>">/div>
+/div>
+
+JAVASCRIPT 
+function ex010(resultado){
+    let frase = <strong>document.getElementById('fraseId10').value.toLowerCase()</strong>
+    frase = <strong>frase.replace(/[âáãà]/g, 'a')</strong>
+    frase = <strong>frase.replace(/ /g, '')</strong>
+    let letraA = <strong>frase.split('a').length - 1</strong>
+    let primeira = <strong>frase.indexOf('a') + 1</strong>
+    let ultima = <strong>frase.lastIndexOf('a') + 1</strong> 
+    resultado.style.display = 'block'
+
+    resultado.<strong>innerHTML</strong> = `p>Quantidade de letras 'a' = ${letraA}/p>\
+    p>1ª letra 'a' está na posição ${primeira}/p>\
+    p>Ultima letra 'a' está na posição ${ultima}/p>` 
+}
+
+<h2>Explicação</h2>
+HTML 
+1 - <strong>Input texto com Id</strong> 
+2 - <strong>Input Submit</strong> com uma <strong>
+    função
+    click ex010()
+</strong> com um <strong>parametro</strong> 
+que é a <strong>Div</strong> para exibir o resultado
+3 - <strong>Div</strong> para exibir o resultado
+
+JAVASCRIPT 
+1 - Variavel com <strong>Id do input texto</strong> 
+2 - <strong>Replace </strong>para substituir todos 
+o 'a' com acentos pelo 'a' comum.
+<strong>variavel.replace(/[âáãà]/g, 'a')</strong>
+3 - <strong>Replace</strong> para substituir todos 
+os espaços por nada, ou seja, 
+remover os espaços. 
+<strong>variavel.replace(/ /g, '')</strong>
+4 - <strong>Split('a')</strong> cria uma lista com 
+removendo o caractere escolhido que 
+neste caso é o a. 
+Exemplo: a vida é boa. O <strong>split('a')</strong> 
+vai criar uma <strong>lista ['vid', 'é', 'bo']</strong>
+Quando o <strong>lenght</strong> é adicionado ele conta 
+o numero de vezes que o caractere que 
+está dentro de <strong>split</strong> ocorre, mas a 
+contagem dá 1 a mais, por isso utiliza 
+o <strong>- 1</strong>
+5 - <strong>indexOf() </strong>procurar a primeira 
+ocorrencia do caractere selecionado
+como a psição se inicia do 0 é usado 
+<strong>+ 1</strong> para dar a posição comum que é 
+iniciar do 1
+6 - <strong>lastIndexOf('a')</strong> vai dar a ultima 
+ocorrencia do caractere. o uso do 
+<strong>+ 1</strong> é semelhante o do ponto anterior
+
+
 
                     </code>
                 </pre>
@@ -662,7 +724,48 @@ o ultimo elemento da lista
             <div class="java" id="res11">
                 <pre>
                     <code>
+HTML 
+div class="js">
+    <strong>label for="<strong>nomeId11</strong>">Nome Completo/label></strong>
+    <strong>input type="text"</strong> name="nome" <strong>id="nomeId11"</strong> <strong>oninput="ex011(nomeId11, onze)</strong>">
+    div class="resultado" <strong>id="onze"</strong> <strong>oninput="ex011(nomeId11, onze)</strong>">/div>
+/div>
 
+SCRIPT 
+<strong>function</strong> <strong>ex011(name, resultado)</strong>{
+    let nome = <strong>String(name.value)</strong>
+    let separado = <strong>nome.split(" ")</strong>
+    let primeiro = <strong>separado[0]</strong>
+    let ultimo = <strong>separado[separado.length - 1]</strong>  
+    resultado.style.display = 'block'
+
+    resultado.<strong>innerHTML</strong> = `<p>Primeiro: ${primeiro}</p>\
+    <p>Ultimo: ${ultimo}</p>`
+ }
+<strong> </strong>
+<h2>Explicação</h2>
+
+HTML 
+1 - <strong>input texto</strong> com <strong>Id</strong> e uma <strong>
+    função
+    oninput ex011()
+</strong> com dois paramentos 
+que é o proprio <strong>input texto</strong> e a <strong>div</strong> 
+para exibir o resultado
+2 - <strong>Div</strong> para exibir o resultado que 
+tem um <strong>Id</strong> e a funçao <strong>oninput ex011</strong> 
+também
+
+SCRIPT 
+1 - <strong>Variavel</strong> com o <strong>Id input texto</strong> 
+2 - <strong>variavel 2 split(' ')</strong> para criar 
+uma lista separando os elementos pelo 
+espaço<strong> (' ')</strong>.
+3 - <strong>Variavel3</strong> para receber o primeiro 
+elemento da lista <strong>variavel2[0]</strong>
+4 - <strong>Variavel3</strong> para receber o ultimo 
+elemento da lista 
+<strong>variavel2[variavel2.length - 1]</strong>
                     </code>
                 </pre>
             </div>

@@ -92,9 +92,29 @@ section.texto > h2{
     font-size: 1.2em;
 }
 
+section.texto > h3{
+    margin-top: 15px;
+    margin-bottom: 8px;
+    padding: 8px;
+
+    font-size: 0.9em;
+    font-weight: normal;
+    font-family: var(--padrao);
+
+    color:white;
+    background-color: var(--cor2);
+    border: 2px solid var(--cor1);
+
+    overflow: scroll;
+}
+
 section.texto > p{
     text-align: justify;
     font-family: var(--padrao);
+}
+
+section.texto > p > strong{
+    color: darkred;
 }
 
 section.texto > p.resolucao{
