@@ -407,6 +407,51 @@ escolhido pelo computador
                     </code>
                 </pre>
             </div>
+
+            <h2>Exercicio 13</h2>
+            <p>Escreva um programa que leia a velocidade de um carro. Se ele ultrapassar 80Km/h, mostre uma mensagem dizendo que ele foi multado. O valor da multa é de R$163,50 e R$15 por quilometro caso utrapasse 10% acima da velocidade limite</p>
+            <p class="resolucao" onclick="ver(treze)">Clique aqui para ver a resolução</p>
+            <div class="python" id="treze">
+                <pre>
+                    <code>
+<strong>LIMITE</strong> = 80
+<strong>velocidade</strong> = int(input('Velocidade (Km/h): '))
+
+<strong>if</strong> velocidade <strong>></strong> LIMITE:
+        <strong>print</strong>(<strong>f</strong>'Utrapassou o limite de velocidade!')
+        
+        <strong>if</strong> velocidade <strong><=</strong> (LIMITE * 1.1):
+            <strong>print</strong>(<strong>f</strong>'Valor da multa: R$163.50')
+
+        <strong>elif</strong> velocidade <strong>></strong> (LIMITE * 1.1):
+            print(f'Valor da multa:\
+            {163.50 + ((velocidade - (LIMITE * 1.1)) * 15)}')
+    
+<strong>else</strong>:
+        <strong>print</strong>('Não utrapassou o limite de velocidade')
+
+<strong>
+    <h2>Explicação</h2>
+<strong></strong></strong>
+1 - <strong>Constante</strong> limite
+2 - <strong>Variavel</strong> para inserir a velocidade
+3 - <strong>Condição SE</strong> a velocidade é maior 
+do que o limite, vai <strong>exibir a mensagem</strong> 
+que utrapassou o limite. 
+4 - <strong>Condição SE dentro da outra condição</strong>. 
+Se a velocidade for <strong>menor</strong> do <strong>que o limite</strong>
+<strong>+ 10% </strong>a multa será de um valor fixo
+5 - <strong>Se</strong> a velocidade for <strong>maior</strong> do o<strong>
+     limite
+    + 10%
+</strong> a multa será o valor fixo mais 15 
+reais por km utrapassado
+6 - <strong>Else</strong> para fecha a <strong>condição</strong> caso a 
+velocidade seja <strong>inferior</strong> ao limite
+
+                    </code>
+                </pre>
+            </div>
         </section>
     </main>
 

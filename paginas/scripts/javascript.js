@@ -146,3 +146,20 @@ function ex010(resultado){
     resultado.innerHTML = `<p>Primeiro: ${primeiro}</p>\
     <p>Ultimo: ${ultimo}</p>`
  }
+
+ function ex012(numero, resultado){
+    let valor = Number(numero.value)
+    let computador = Math.floor(Math.random() * 6)
+    resultado.style.display = 'block'
+
+    if (valor == computador){
+        resultado.innerHTML = `<p>Ganhou!</p>
+        <p>Jogador jogou ${valor}</p>
+        <p>Computador jogou ${computador}</p>`
+    }else{
+        resultado.innerHTML = `<p>Perdeu!</p>
+        <p>Jogador jogou ${valor}</p>
+        <p>Computador jogou ${computador}</p>`
+    }
+
+ }
