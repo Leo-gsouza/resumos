@@ -149,17 +149,34 @@ function ex010(resultado){
 
  function ex012(numero, resultado){
     let valor = Number(numero.value)
-    let computador = Math.floor(Math.random() * 6)
+    let computador = Math.floor(Math.random() * (5 - 0 + 1) + 0)
     resultado.style.display = 'block'
 
-    if (valor == computador){
+    if (valor > 5 || valor < 0 ){
+        resultado.innerHTML = `Valor invalido`
+    }else{
+        if (valor == computador){
         resultado.innerHTML = `<p>Ganhou!</p>
         <p>Jogador jogou ${valor}</p>
         <p>Computador jogou ${computador}</p>`
-    }else{
+        }else{
         resultado.innerHTML = `<p>Perdeu!</p>
         <p>Jogador jogou ${valor}</p>
         <p>Computador jogou ${computador}</p>`
+        }
     }
+}
 
- }
+function ex013(vel, res){
+    let velocidade = Number(vel.value)
+    let acima = velocidade - 80
+    res.style.display = 'block'
+
+    if (velocidade > 80){
+        res.innerHTML = `<h2>Foi Multado!</h2> \
+        <p>Valor da multa R$${(acima*7.5 + 263).toFixed(2)}</p>`
+    }else{
+        res.innerHTML = `<p>abaixo da velocidade</p> \
+        <h1>Parabéns</h1>`
+    }
+}

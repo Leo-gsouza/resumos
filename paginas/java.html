@@ -29,8 +29,8 @@
 
             <h2>Exercicio 01</h2>
             <p>Crie um programa que leia um número real qualquer pelo teclado e mostre na tela a sua porção Inteira.</p>
-            <p class="resolucao" onclick="ver(res1)">Clique para ver a resolução</p>
-            <div class="java" id="res1">
+            <p class="resolucao" onclick="ver(um)">Clique para ver a resolução</p>
+            <div class="java" id="um">
                 <pre>
                     <code>
 HTML
@@ -63,14 +63,14 @@ o parseInt que exibe apenas numeros inteiros
 
             <div class="js">
                 <label for="numeroId">Numero Real: </label>
-                <input type="number" name="numero" id="numeroId" oninput="ex001(um)">
-                <div class="resultado" id="um"></div>
+                <input type="number" name="numero" id="numeroId" oninput="ex001(res1)">
+                <div class="resultado" id="res1"></div>
             </div>
 
             <h2>Exercicio 2</h2>
             <p>Faça um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo. Calcule e mostre o comprimento da hipotenusa.</p>
-            <p class="resolucao" onclick="ver(res2)">Clique para ver a resolução</p>
-            <div class="java" id="res2">
+            <p class="resolucao" onclick="ver(dois)">Clique para ver a resolução</p>
+            <div class="java" id="dois">
                 <pre>
                     <code>
 HTML
@@ -105,16 +105,16 @@ como resposta
 
             <div class="js">
                 <label for="opostoId">Oposto: </label>
-                <input type="number" name="oposto" id="opostoId" oninput="ex002(opostoId, adjacenteId, dois)">
+                <input type="number" name="oposto" id="opostoId" oninput="ex002(opostoId, adjacenteId, res2)">
                 <label for="adjacenteId">Adjacente: </label>
-                <input type="number" name="adjacente" id="adjacenteId" oninput="ex002(opostoId, adjacenteId, dois)">
-                <div class="resultado" id="dois" ></div>
+                <input type="number" name="adjacente" id="adjacenteId" oninput="ex002(opostoId, adjacenteId, res2)">
+                <div class="resultado" id="res2" ></div>
             </div>
 
             <h2>Exercicio 03</h2>
             <p>Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.</p>
-            <p class="resolucao" onclick="ver(res3)">Clique para ver a resolução</p>
-            <div class="java" id="res3">
+            <p class="resolucao" onclick="ver(tres)">Clique para ver a resolução</p>
+            <div class="java" id="tres">
                 <pre>
                     <code>
 HTML
@@ -168,14 +168,14 @@ o numeros com apenas 3 casas decimais
             
             <div class="js">
                 <label for="anguloId">Angulo: </label>
-                <input type="number" name="angulo" id="anguloId" oninput="ex003(this, tres)">
-                <div class="resultado" id="tres"></div>
+                <input type="number" name="angulo" id="anguloId" oninput="ex003(this, res3)">
+                <div class="resultado" id="res3"></div>
             </div>
 
             <h2>Exercicio 04</h2>
             <p>Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome dos alunos e escrevendo na tela o nome do escolhido.</p>
-            <p class="resolucao" onclick="ver(res4)">Clique para ver a resolução</p>
-            <div class="java" id="res4">
+            <p class="resolucao" onclick="ver(quatro)">Clique para ver a resolução</p>
+            <div class="java" id="quatro">
                 <pre>
                     <code>
 HTML
@@ -299,16 +299,16 @@ cont indice vai valer 1
                 <input type="text" name="aluno3" id="aluno3Id">
                 <label for="aluno4Id">Aluno 4:</label>
                 <input type="text" name="aluno4" id="aluno4Id">
-                <input type="submit" value="Sortear" onclick="ex004(quatro)">
+                <input type="submit" value="Sortear" onclick="ex004(res4)">
 
-                <div class="resultado" id="quatro"></div>
+                <div class="resultado" id="res4"></div>
             </div>
 
             <h2>Exercicio 05</h2>
             <p>O mesmo professor do desafio 19 quer sortear a ordem de apresentação de trabalhos dos alunos. Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada.</p>
             <p>Observação: Será usado os nomes dos alunos que foram inseridos no exercicio anterior</p>
-            <p class="resolucao" onclick="ver(res5)">Clique para ver a resolução</p>
-            <div class="java" id="res5">
+            <p class="resolucao" onclick="ver(cinco)">Clique para ver a resolução</p>
+            <div class="java" id="cinco">
                 <pre>
                     <code>
 HTML 
@@ -378,8 +378,8 @@ em um valor entre <strong>-0.5 e 0.5.</strong> Quando o
 
             </div>
             <div class="js">
-                <input type="submit" value="Sortear" onclick="ex005(cinco)">
-                <div class="resultado" id="cinco"></div>
+                <input type="submit" value="Sortear" onclick="ex005(res5)">
+                <div class="resultado" id="res5"></div>
             </div>
 
             <h2>Exercicio 06</h2>
@@ -389,8 +389,8 @@ em um valor entre <strong>-0.5 e 0.5.</strong> Quando o
                     <li>Quantas letras ao todo (sem considerar espaços).</li>
                     <li>Quantas letras tem o primeiro nome.</li>
                 </ol>
-            <p class="resolucao" onclick="ver(res6)">Clique aqui para ver a resolução</p>
-            <div class="java" id="res6">
+            <p class="resolucao" onclick="ver(seis)">Solução</p>
+            <div class="java" id="seis">
                 <pre>
                     <code>
 
@@ -455,14 +455,14 @@ foi ultizado o <strong>lenght</strong> na variavel nome
             </div>
             <div class="js">
                 <label for="nome" class="nome">Nome: </label>
-                <input type="text" name="nome" id="nomeCompleto" placeholder="Nome Completo" oninput="ex006(seis)">
-                <div class="resultado" id="seis"></div>
+                <input type="text" name="nome" id="nomeCompleto" placeholder="Nome Completo" oninput="ex006(res6)">
+                <div class="resultado" id="res6"></div>
             </div>
 
             <h2>Exercicio 07</h2>
             <p>Faça um programa que leia um número de 0 a 9999 e mostre na tela cada um dos dígitos separados.</p>
-            <p class="resolucao" onclick="ver(res7)">Clique aqui para ver a resolução</p>
-            <div class="java" id="res7">
+            <p class="resolucao" onclick="ver(sete)">Solução</p>
+            <div class="java" id="sete">
                 <pre>
                     <code>
 HTML 
@@ -506,14 +506,14 @@ o valor de entrada <strong>input</strong> com o <strong>ID</strong>
 
             <div class="js">
                 <label for="numeroId7">Numero:</label>
-                <input type="number" name="numero" id="numeroId7" oninput="ex007(sete)" placeholder="0 á 9999">
-                <div class="resultado" id="sete" oninput="ex007(sete)"></div>
+                <input type="number" name="numero" id="numeroId7" oninput="ex007(res7)" placeholder="0 á 9999">
+                <div class="resultado" id="res7" oninput="ex007(res7)"></div>
             </div>
 
             <h2>Exercicio 08</h2>
             <p>Crie um programa que leia o nome de uma cidade diga se ela começa ou não com o nome “SANTO”.</p>
-            <p class="resolucao" onclick="ver(res8)">Clique aqui para ver a resolução</p>
-            <div class="java" id="res8">
+            <p class="resolucao" onclick="ver(oito)">Solução</p>
+            <div class="java" id="oito">
                 <pre>
                     <code>
 HTML 
@@ -566,16 +566,15 @@ na digitação do usuario
             <div class="js">
                 <label for="cidadeId8">Cidade: </label>
                 <input type="text" name="cidade" id="cidadeId8">
-                <input type="submit" value="Conferir" onclick="ex008(cidadeId8, oito)">
-                <div class="resultado" id="oito"></div>
+                <input type="submit" value="Conferir" onclick="ex008(cidadeId8, res8)">
+                <div class="resultado" id="res8"></div>
             </div>
 
             <h2>Exercicio 9</h2>
             <p>Crie um programa que leia o nome de uma pessoa e diga se ela tem “SILVA” no nome.</p>
-            <p class="resolucao" onclick="ver(res9)">Clique aqui para ver a resolução</p>
-            <strong>
-                <div class="java" id="res9">
-            </strong>
+            <p class="resolucao" onclick="ver(nove)">Solução</p>
+        
+            <div class="java" id="nove">
                 <pre>
                     <code>
 HTML 
@@ -633,15 +632,15 @@ o ultimo elemento da lista
             <div class="js">
                 <label for="nomeId9">Nome Completo:</label>
                 <input type="text" name="Nome" id="nomeId9" >
-                <input type="submit" value="Conferir" onclick="ex009(nomeId9, nove)">
-                <div class="resultado" id="nove" ></div>
+                <input type="submit" value="Conferir" onclick="ex009(nomeId9, res9)">
+                <div class="resultado" id="res9" ></div>
             </div>
 
             <h2>Exercicio 10</h2>
             <p>Faça um programa que leia uma frase pelo teclado e mostre quantas vezes aparece a letra “A”, em que posição ela aparece a primeira vez e em que posição ela aparece a última vez.
             </p>
-            <p class="resolucao" onclick="ver(res10)">Clique aqui para ver a resolução</p>
-            <div class="java" id="res10">
+            <p class="resolucao" onclick="ver(dez)">Solução</p>
+            <div class="java" id="dez">
                 <pre>
                     <code>
 HTML 
@@ -714,14 +713,14 @@ ocorrencia do caractere. o uso do
             <div class="js">
                 <label for="fraseId10">Frase: </label>
                 <input type="text" name="frase" id="fraseId10">
-                <input type="submit" value="Buscar" onclick="ex010(dez)">
-                <div class="resultado" id="dez"></div>
+                <input type="submit" value="Buscar" onclick="ex010(res10)">
+                <div class="resultado" id="res10"></div>
             </div>
 
             <h2>Exercicio 11</h2>
             <p>Faça um programa que leia o nome completo de uma pessoa, mostrando em seguida o primeiro e o último nome separadamente.</p>
-            <p class="resolucao" onclick="ver(res11)">Clique aqui para ver a resolução</p>
-            <div class="java" id="res11">
+            <p class="resolucao" onclick="ver(onze)">Solução</p>
+            <div class="java" id="onze">
                 <pre>
                     <code>
 HTML 
@@ -772,16 +771,83 @@ elemento da lista
 
             <div class="js">
                 <label for="nomeId11">Nome Completo</label>
-                <input type="text" name="nome" id="nomeId11" oninput="ex011(nomeId11, onze)">
-                <div class="resultado" id="onze" oninput="ex011(nomeId11, onze)"></div>
+                <input type="text" name="nome" id="nomeId11" oninput="ex011(this, res11)">
+                <div class="resultado" id="res11" oninput="ex011(nomeId11, this)"></div>
             </div>
 
             <h2>Exercicio 12</h2>
             <p>Escreva um programa que faça o computador “pensar” em um número inteiro entre 0 e 5 e peça para o usuário tentar descobrir qual foi o número escolhido pelo computador. O programa deverá escrever na tela se o usuário venceu ou perdeu.</p>
-            <p class="resolucao" onclick="ver(res12)">Clique aqui para ver a resolução</p>
-            <div class="java" id="res12">
+            <p class="resolucao" onclick="ver(doze)">Solução</p>
+            <div class="java" id="doze">
                 <pre>
                     <code>
+HTML 
+div class="js">
+    label for="<strong>numeroId12</strong>">Numero/label>
+    <strong>input type="number"</strong> name="numero" <strong>id="numeroId12</strong>" placeholder="entre 0 e 5">
+    <strong>input type="submit"</strong> value="Jogar" <strong>onclick="ex012(numeroId12, doze)</strong>">
+    div class="resultado" <strong>id="doze</strong>">/div>
+/div>
+
+JAVASCRIPT 
+<strong>function ex012(numero, resultado)</strong>{
+    let valor = <strong>Number(numero.value)</strong>
+    let computador = <strong>Math.floor(Math.random() * (5 - 0 + 1) + 0)</strong>
+    resultado.style.display = 'block'
+
+    <strong>if (valor > 5 || valor < 0 )</strong>{
+        resultado.<strong>innerHTML</strong> = `Valor invalido`
+        <strong>if</strong> (valor == computador){
+            resultado.<strong>innerHTML</strong> = `p>Ganhou!/p>
+            p>Jogador jogou ${valor}/p>
+            p>Computador jogou ${computador}/p>`
+        }<strong>else</strong>{
+            resultado.innerHTML = `p>Perdeu!/p>
+            p>Jogador jogou ${valor}/p>
+            p>Computador jogou ${computador}/p>`
+        }
+    }    
+ }
+
+<h2>Explicação</h2>
+HTML 
+1 - <strong>Input number</strong> com <strong>Id</strong> 
+2 - <strong>Input Submit</strong> com <strong>função click</strong>
+<strong>ex012</strong> com <strong>dois parametros</strong>, um deles
+o <strong>input number</strong> e outro a <strong>Div</strong> para 
+exibir o resultado
+3 - <strong>Div</strong> com <strong>Id</strong> para exibir o resultado 
+
+JAVASCRIPT 
+1 - <strong>Variavel</strong> com o valor do <strong>input number</strong>
+2 - <strong>Variavel</strong> para exibir um valor aleatorio
+entre 0 e 5. Para criar esta funcionalidade 
+foi necessario:
+<strong>Math.floor(Math.random() * (5 - 0 + 1) + 0)</strong>
+2.1 - <strong>Math.random</strong> => vai criar um valor 
+0 e 1.
+2.2 - O <strong>calculo 5 - 0 + 1</strong> significa:
+<strong>5</strong> é o <strong>valor maximo </strong>a ser sorteado
+<strong>0</strong> é o <strong>valor minimo</strong> a ser sorteado
+<strong>+ 1</strong> é necessário para o max entrar 
+no sorteio
+2.3 - <strong>+ 0</strong> fora do parentes é o<strong> minimo</strong>
+necessario para iniciar sempre depois 
+do minino. 
+dica: o codigo para usar em uma função com 
+dois parametros (min, max)
+<strong>Math.floor(Math.random() * (max - min + 1) + min)</strong>
+2.4 - <strong>Condição</strong> para <strong>evitar</strong> que seja 
+um <strong>valor maior que 5 e inferior a 0</strong>.
+2-5 - <strong>Condição</strong> que vai <strong>comparar</strong> o<strong>
+valor digitado pelo usuario
+</strong> com o <strong> valor sorteado pelo programa
+</strong>. Se os valores forem iguais vai exibir 
+um resultado caso contrario outro.
+
+
+
+
 
                     </code>
                 </pre>
@@ -789,9 +855,46 @@ elemento da lista
 
             <div class="js">
                 <label for="numeroId12">Numero</label>
-                <input type="text" name="numero" id="numeroId12" placeholder="entre 0 e 5">
-                <input type="submit" value="Jogar" onclick="ex012(numeroId12, doze)">
-                <div class="resultado" id="doze"></div>
+                <input type="number" name="numero" id="numeroId12" placeholder="entre 0 e 5">
+                <input type="submit" value="Jogar" onclick="ex012(numeroId12, res12)">
+                <div class="resultado" id="res12"></div>
+            </div>
+
+            <h2>Exercicio 13</h2>
+            <p>Escreva um programa que leia a velocidade de um carro. Se ele ultrapassar 80Km/h, mostre uma mensagem dizendo que ele foi multado. A multa vai custar R$263,00 mais 7,50 por quilometro acima do limite.</p>
+            <p class="resolucao" onclick="ver(treze)">Solução</p>
+            <div class="java" id="treze">
+                <pre>
+                    <code>
+HTML
+div class="js">
+    label for="vel13">Velocidade:/label>
+    input type="number" name="vel" id="vel13" oninput="ex013(this, res13)">
+    div class="resultado" id="res13" oninput="ex013(vel13, this)">/div>
+/div>
+
+SCRIPT
+function ex013(vel, res){
+    let velocidade = Number(vel.value)
+    let acima = velocidade - 80
+    res.style.display = 'block'
+
+    if (velocidade > 80){
+        res.innerHTML = `h2>Foi Multado!/h2> \
+        p>Valor da multa R$${(acima*7.5 + 263).toFixed(2)}/p>`
+    }else{
+        res.innerHTML = `<p>abaixo da velocidade</p> \
+        h1>Parabéns/h1>`
+    }
+}
+                    </code>
+                </pre>
+            </div>
+
+            <div class="js">
+                <label for="vel13">Velocidade:</label>
+                <input type="number" name="vel" id="vel13" oninput="ex013(this, res13)">
+                <div class="resultado" id="res13" oninput="ex013(vel13, this)"></div>
             </div>
 
         </section>

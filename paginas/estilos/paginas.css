@@ -177,7 +177,7 @@ pre{
 }
 
 div.python h2{
-    width: 120px;
+    width: 270px;
     padding: 5px;
 
     text-align: center;
@@ -256,8 +256,13 @@ div.js > div.resultado{
 
 }
 
-code > strong{
+strong{
     color: yellow;
+}
+
+strong.fixar{
+    color: lightgreen;
+    font-weight: bold;
 }
 
 div.resultado{
