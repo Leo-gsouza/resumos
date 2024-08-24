@@ -180,3 +180,30 @@ function ex013(vel, res){
         <h1>Parabéns</h1>`
     }
 }
+
+function ex014(num, res){
+    let numero = Number(num.value)
+    res.style.display = 'block'
+
+    if (numero == 0){
+        res.innerHTML = '0 é neutro'
+    }else if (numero % 2 == 0){
+        res.innerHTML =`Número ${numero} é PAR`
+    
+    }else{
+        res.innerHTML = `Número ${numero} é IMPAR`
+    }
+}
+
+function ex015(dis, res){
+    let distancia = Number(dis.value)
+    res.style.display = 'block'
+
+    if (distancia > 200){
+        valor = distancia * 0.45
+    }else{
+        valor = distancia * 0.5
+    }
+
+    res.innerHTML = `Valor da passagem R$${valor.toFixed(2)} `
+}

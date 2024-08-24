@@ -868,25 +868,40 @@ um resultado caso contrario outro.
                     <code>
 HTML
 div class="js">
-    label for="vel13">Velocidade:/label>
-    input type="number" name="vel" id="vel13" oninput="ex013(this, res13)">
-    div class="resultado" id="res13" oninput="ex013(vel13, this)">/div>
+    <strong>label</strong> for="vel13">Velocidade:/label>
+    <strong>input type="number"</strong> name="vel" <strong>id="vel13"</strong> <strong>oninput="ex013(this, res13)</strong>">
+    <strong>div class="resultado" id="res13" oninput="ex013(vel13, this)</strong>">/div>
 /div>
 
-SCRIPT-
-function ex013(vel, res){
-    let velocidade = Number(vel.value)  .
-    let acima = velocidade - 80
+SCRIPT
+<strong>function ex013(vel, res)</strong>{
+    <strong>let velocidade = Number(vel.value)</strong>  .
+    <strong>let acima</strong> = velocidade - 80
     res.style.display = 'block'
 
     if (velocidade > 80){
-        res.innerHTML = `h2>Foi Multado!/h2> \
+        <strong>res.innerHTML</strong> = `h2>Foi Multado!/h2> \
         p>Valor da multa R$${(acima*7.5 + 263).toFixed(2)}/p>`
     }else{
-        res.innerHTML = `<p>abaixo da velocidade</p> \
+        <strong>res.innerHTML</strong> = `<p>abaixo da velocidade</p> \
         h1>Parabéns/h1>`
     }
 }
+<h2>Explicação</h2>
+HTML 
+1 - <strong>input number</strong> com uma <strong>
+    função
+    oninput ex013 com 2 parametros
+</strong> 
+2 - <strong>Div</strong> com a mesma <strong>
+    função do
+    input number
+</strong> 
+
+SCRIPT 
+1 - Criado <strong>duas variaveis</strong>
+2 - <strong>condição SE</strong> para ver 
+se a velocidade está acima de 80
                     </code>
                 </pre>
             </div>
@@ -895,6 +910,75 @@ function ex013(vel, res){
                 <label for="vel13">Velocidade:</label>
                 <input type="number" name="vel" id="vel13" oninput="ex013(this, res13)">
                 <div class="resultado" id="res13" oninput="ex013(vel13, this)"></div>
+            </div>
+
+            <h2>Exercicio 14</h2>
+            <p>Crie um programa que leia um número inteiro e mostre na tela se ele é PAR ou ÍMPAR.</p>
+            <p class="resolucao" onclick="ver(quatorze)">Solução</p>
+            <div class="java" id="quatorze">
+                <pre>
+                    <code>
+HTML 
+div class="js">
+    <strong>label</strong> for="num14">Numero: /label>
+    <strong>input type="number" name="numero" id="num14" oninput="ex014(this, res14)</strong>">
+    <strong>div class="resultado" id="res14" oninput="ex014(num14, this)</strong>">/div>
+/div>
+
+SCRIPT 
+<strong>function ex014(num, res)</strong>{
+    <strong>let numero = Number(num.value)</strong>
+    res.style.display = 'block'
+
+    <strong>if</strong> (numero == 0){
+        <strong>res.innerHTML</strong> = '0 é neutro'
+    }<strong>else if</strong> (numero<strong> %</strong> 2 == 0){
+        <strong>res.innerHTML</strong> =`Número ${numero} é PAR`
+    
+    }<strong>else</strong>{
+        <strong>res.innerHTML</strong> = `Número ${numero} é IMPAR`
+    }
+}
+
+<h2>Explicação</h2>
+HTML 
+1 - <strong>
+    input number com função oninput ex014
+    com  dois parametros
+</strong>
+2 - <strong>div</strong> com a <strong>mesma função</strong> do input
+
+SCRIPT 
+1 - criado a <strong>variavel numero </strong>
+2 - <strong>Condição SE</strong> para calcular 
+se o valor é par ou impar 
+obs:<strong> %</strong> resto da divisão
+                    </code>
+                </pre>
+            </div>
+
+            <div class="js">
+                <label for="num14">Numero: </label>
+                <input type="number" name="numero" id="num14" oninput="ex014(this, res14)">
+                <div class="resultado" id="res14" oninput="ex014(num14, this)"></div>
+            </div>
+
+            <h2>Exercicio 15</h2>
+            <p>Desenvolva um programa que pergunte a distância de uma viagem em Km. Calcule o preço da passagem, cobrando R$0,50 por Km para viagens de até 200Km e R$0,45 parta viagens mais longas.</p>
+            <p class="resolucao" onclick="ver(quinze)" >Solução</p>
+            <div class="java" id="quinze">
+                <pre>
+                    <code>
+
+                    </code>
+                </pre>
+            </div>
+
+            <div class="js">
+                <label for="dis15">Distancia Km</label>
+                <input type="number" name="distancia" id="dis15">
+                <input type="submit" value="Calcular" onclick="ex015(dis15, res15)">
+                <div class="resultado" id="res15"></div>
             </div>
 
         </section>
